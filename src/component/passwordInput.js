@@ -8,6 +8,8 @@ import {
     TextField
 } from 'react-native-material-textfield';
 
+import { FormInput } from 'react-native-elements';
+
 export default class PasswordInputText extends React.Component {
 
     constructor(props) {
@@ -42,7 +44,7 @@ export default class PasswordInputText extends React.Component {
     render() {
         return (
             <View>
-                <TextField {...this.props}
+                <FormInput {...this.props}
                            secureTextEntry={this.state.password}/>
                 <Icon style={styles.icon}
                       name={this.state.icEye}
@@ -60,8 +62,8 @@ export const styles = StyleSheet.create({
 
     icon: {
         position: 'absolute',
-        top: 33,
-        right: 0
+        top: 10,
+        right: 20
     }
 
 });
